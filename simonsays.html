@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simon Says Game</title>
+    <link rel="stylesheet" href="simonsays.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div id="gamebody">
+        <h1>Simon Says <i class="fa-solid fa-gamepad"></i> </h1>
+        <marquee behavior="scroll" direction="left" class="marquee-text">
+            <h2>Press Any Key to Start the Game</h2>
+        </marquee> 
+        <div class="btn-container">
+            <div class="line-one">
+                <div class="btn red" id="red" aria-label="Red button"></div>
+                <div class="btn yellow" id="yellow" aria-label="Yellow button"></div> 
+            </div>
+            
+            <div class="line-two">
+                <div class="btn green" id="green" aria-label="Green button"></div>
+                <div class="btn purple" id="purple" aria-label="Purple button"></div>
+            </div>
+        </div>
+        <h3>Click "<i class="fa-solid fa-eye"></i>" to View Your Highest Score</h3>
+       <button class="score-btn"><i class="fa-solid fa-eye"></i></button>
+    </div>
+    
+    <div class="score score-display">
+        <h3>Your Highest Score</h3>
+        <h4 id="high-score">Score: 0</h4>
+        <button class="score-btn2"><i class="fa-solid fa-eye-slash"></i></button>
+    </div>
+    <script src="simonsays.js"></script>
+</body>
+</html>
