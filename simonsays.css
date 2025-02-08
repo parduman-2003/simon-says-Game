@@ -1,0 +1,145 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-image: url('https://wallpapers-clan.com/wp-content/uploads/2023/11/funny-pac-man-colorful-desktop-wallpaper-preview.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    padding-top:5% ;
+}
+
+/* Create the overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+    z-index: -1; /* Send overlay behind the content */
+}
+
+h3{
+    margin-top: 10px;
+    color: #ff6f61;
+}
+#gamebody {
+    margin: auto;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    max-width: 600px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #ff6f61;
+    margin-bottom: 10px;
+}
+
+.marquee-text {
+    font-size: 1.2rem;
+    color: #ffeb3b;
+    font-weight: bold;
+    background-color: #1b9aaa;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5rem;
+}
+
+.btn-container {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    height: 20%;
+    width: 20%;
+}
+
+.btn {
+    height: 140px;
+    width: 140px;
+    border: 5px solid #ffbc42;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.2s, opacity 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+    transform: scale(1.1);
+}
+
+.red { background-color: #ff6f61; }
+.green { background-color: #56d6a3; }
+.yellow { background-color: #ffeb3b; }
+.purple { background-color: #9c6bd8; }
+
+/* Flashing effect for button animation */
+.flash {
+    animation: flash 0.2s ease-in-out;
+}
+
+@keyframes flash {
+    0% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.score {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.score-btn, .score-btn2 {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ffeb3b;
+    border: none;
+    border-radius: 5px;
+    color: #000;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.score-btn:hover, .score-btn2:hover {
+    background-color: #ff6f61;
+}
+
+/* Button styling */
+.line-one, .line-two {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.score-display
+{
+    visibility: hidden;
+}
